@@ -34,7 +34,6 @@ public class GiaoDienController {
     public String trangchu(@RequestParam String username, @RequestParam String password, ModelMap modelMap, @RequestParam String chek) {
         List<KhachHang> khachHangs = customerResClient.getAllCustomer();
         List<NhanVien> nhanViens = perssionnalResClient.getAllPersionnal();
-        System.out.println();
         if (chek.equals("khachhang")) {
             for (KhachHang kh : khachHangs) {
                 if (username.equals(kh.getUsername()) && password.equals(kh.getPassword())) {
